@@ -1,15 +1,16 @@
 class Solution {
+    List<List<Integer>> r = new ArrayList<>();
+    List<Integer> t = new ArrayList<>();
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> l1 = new ArrayList<>();
-        for(int i=0;i<(1 << nums.length);i++){
-            List<Integer> l2 = new ArrayList<>();
-            for(int k=0;k<nums.length;k++){
-                if(( i & (1 << k))!= 0){
-                    l2.add(nums[k]);
-                }
-            }
-            l1.add(l2);
+            bt(nums,0);
+            return r;
+    }
+    private void bt(int[] nums,int id){
+        r.add(new ArrayList<>(t));
+        for(int i=id;i<nums.length;i++){
+            t.add(nums[i]);
+            bt(nums,i+1);
+            t.remove(t.size() - 1);
         }
-        return l1;
     }
 }
