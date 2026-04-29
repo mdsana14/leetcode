@@ -8,9 +8,9 @@ class Solution {
     private void bt(int[] nums,int id){
         r.add(new ArrayList<>(t));
         for(int i=id;i<nums.length;i++){
-            t.add(nums[i]);
-            bt(nums,i+1);
-            t.remove(t.size() - 1);
+            t.add(nums[i]);//add
+            bt(nums,i+1);//backtrack
+            t.remove(t.size() - 1);//undo
         }
     }
 }
