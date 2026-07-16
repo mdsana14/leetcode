@@ -6,7 +6,8 @@ class Solution {
         }
         int res = sum;
         for(int i = k;i<nums.length;i++){
-            sum = sum + nums[i] - nums[i-k];
+            sum += nums[i];
+            sum -= nums[i-k];
             res = Math.max(res,sum);
         }
         double r = res;
