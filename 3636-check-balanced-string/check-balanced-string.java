@@ -11,9 +11,6 @@ class Solution {
                 y += t[i] - '0';
             }
         }
-        if(x == y){
-            return true;
-        }
-        return false;
+        return x == y;
     }
 }
