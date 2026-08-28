@@ -10,9 +10,9 @@ class Solution {
             num /= 10;
         }
         int d = dg + dp;
-        if(n % d != 0){
-            return false;
+        if(n % d == 0){
+            return true;
         }
-        return true;
+        return false;
     }
 }
