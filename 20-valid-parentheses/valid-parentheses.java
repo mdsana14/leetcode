@@ -2,7 +2,7 @@ class Solution {
     public boolean isValid(String s) {
         Stack<Character> r = new Stack<Character>();
         for(char c : s.toCharArray()){
-            if(c == '('){
+            if(c == '('){ 
                 r.push(')');
             }
             else if(c == '['){
