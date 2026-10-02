@@ -21,8 +21,6 @@ class Solution {
             s.append(")");
             helper(n,l,r+1,s);
             s.setLength(s.length() -1);
-        }
-       
-        
+        }    
     }
 }
