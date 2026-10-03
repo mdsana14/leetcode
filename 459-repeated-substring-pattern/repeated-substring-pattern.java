@@ -19,9 +19,6 @@ class Solution {
                    break;
                 } 
             }
-            if(!r){
-                break;
-            }
             a += k;
         }
         if(r){
